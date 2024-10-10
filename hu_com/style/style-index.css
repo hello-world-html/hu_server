@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.header {
+    flex-direction: row;
+    padding: 2vw;
+    color: #fff;
+    width: 100auto;
+    height: 20vw;
+    background-image: linear-gradient(-225deg, #231557 0%, #43107a 29%, #FF1361 100%);
+}
+
+.header h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.a-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a {
+    text-align: center;
+    line-height: 3vw;
+    flex-shrink: 0;
+    margin: 8vw;
+    width: 8vw;
+    height: 3vw;
+    border: 2px solid #fff;
+    background-color: skyblue;
+    border-radius: 2em;
+    transition: all 1s ease-out;
+}
+
+.a:hover {
+    background-color: rgba(0, 132, 255, 0.373);
+}
+
+.content {
+    width: 100%;
+    height: 500vw;
+    background: linear-gradient(45deg, #61fbf3, #945aff);
+}
+
+.fu-biao-ti{
+    text-align: center;
+    color: #fcfcfc;
+    position: relative;
+    top: 6vw;
+}
+
+.fu-biao-ti-nierong{
+    font-size: 25px;
+}
+
+.maobolikapian-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maoboli-kapian,
+.maoboli-kapian-1 {
+    margin-top: 5vw;
+    flex-shrink: 0;
+    width: 85vw;
+    height: 40vw;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, .6),
+            rgba(255, 255, 255, .6),
+            rgba(255, 255, 255, .7));
+    backdrop-filter: blur(11px);
+    border-top: 2px solid rgba(255, 255, 255, .8);
+    border-left: 2px solid rgba(255, 255, 255, .8);
+    border-radius: 2em;
+    z-index: 1;
+    position: absolute;
+    top: 40vw;
+}
+
+.maoboli-kapian-1 {
+    position: absolute;
+    top: 100vw;
+}
+
+.maoboli-kapian p,
+.maoboli-kapian-1 p {
+    margin: 12px;
+    padding: 12px;
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 54px;
+}
+
+.after,
+.after1 {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    top: 35vw;
+    left: 80vw;
+    z-index: 0;
+}
+
+.before,
+.before1 {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    top: 75vw;
+    left: 4vw;
+    z-index: 0;
+    transition: all 1s linear;
+}
+
+.after1 {
+    position: absolute;
+    top: 100vw;
+}
+
+.before1 {
+    position: absolute;
+    top: 135vw;
+}
+
+.picture {
+    position: absolute;
+    top: 11vw;
+    left: 32vw;
+    width: 50vw;
+    border-radius: 2em;
+}
