@@ -93,10 +93,14 @@ a {
     border-radius: 2em;
     z-index: 1;
     position: absolute;
-    top: 40vw;
+    /* top: 25vw; */
     left: 5vw;
 }
 
+.maoboli-kapian{
+    position: absolute;
+    top: 55vw;
+}
 .maoboli-kapian-1 {
     position: absolute;
     top: 100vw;
@@ -104,7 +108,6 @@ a {
 
 .maoboli-kapian p,
 .maoboli-kapian-1 p {
-    margin: -85px;
     padding: 12px;
     text-align: center;
     color: #fcfcfc;
@@ -114,14 +117,14 @@ a {
 .mao-buo-li-nierong2 {
     margin: 3vw;
     padding: 3vw;
-    width: 35px;
-    height: 42px;
-    /* border: 2px solid #000; */
+    width: 8vw;
+    height: 9vw;
 }
 
 .mao-buo-li-nierong-2-p {
+    margin: 2vw;
     color: #fcfcfc;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -172,16 +175,16 @@ a {
 @keyframes slide-fade-in {
     from {
         opacity: 0;
-        box-shadow: none;
-        transform: scale(.5) translateY(15vh);
+        /* box-shadow: none; */
+        transform: scale(.1) translateX(12vw);
     }
 }
 
 .maobolikapian-home {
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
     /* 自动排列 */
-    grid-auto-flow: dense;
+    /* grid-auto-flow: dense; */
     grid-template-columns: repeat(4, 30ch);
 }
 
@@ -193,10 +196,9 @@ a {
     /* 定义动画时间范围 */
     animation-range: contain 0% contain 50%;
     /* border-radius: 10px; */
-    line-height: 6;
+    /* line-height: 6; */
     box-shadow: 0px 8px 20px #00000022;
     /* font-size: 32px; */
-    letter-spacing: 5px;
     /* color: #fff; */
     /* width: 100%;
     height: 100%; */
@@ -233,3 +235,143 @@ a {
 .maoboli-kapian-1:nth-of-type(7n) {
     grid-row: span 2;
 }
+
+
+/* 动画关键帧 */
+@keyframes run {
+
+    0%,
+    10% {
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+
+    20%,
+    30% {
+        /* margin-left: -1200px;; */
+        transform: translateX(-1200px);
+    }
+
+    40%,
+    50% {
+        /* margin-left: -2400px; */
+        transform: translateX(-2400px);
+    }
+
+    60%,
+    70% {
+        /* margin-left: -3600px; */
+        transform: translateX(-3600px);
+    }
+
+    80%,
+    90% {
+        /* margin-left: -4800px; */
+        transform: translateX(-4800px);
+    }
+
+    100% {
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+/* <-------------------------------------------------------------------------------> */
+
+.out {
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    margin: 0 auto;
+    top: 42vw;
+    left: 21vw;
+}
+    .out,
+    .inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .out .inner .img {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .out .inner .img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .out .arrow {
+        font-size: 32px;
+    }
+
+    .out .arrow i {
+        position: absolute;
+        color: #fff;
+        z-index: 9999;
+        cursor: pointer;
+        top: 84px;
+    }
+
+    .out .arrow .left {
+        left: 0;
+    }
+
+    .out .arrow .right {
+        left: 780px;
+    }
+
+    /* .out .button {
+        width: 175px;
+        height: 15px;
+        position: absolute;
+        z-index: 9999;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .out .button p {
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: silver;
+    } */
+
+    .out .button p:first-child {
+        background-color: skyblue;
+    }
+
+    .out #last {
+        transform: translateX(0);
+        z-index: 9;
+        opacity: 1;
+    }
+
+    .out #first {
+        transform: translateX(200px) scale(1.3);
+        z-index: 99;
+        opacity: 1;
+    }
+
+    .out #second {
+        transform: translateX(400px);
+        z-index: 9;
+        opacity: 1;
+    }
+
+    .out #left {
+        transform: translateX(-100px);
+        z-index: 1;
+        opacity: 0;
+    }
+
+    .out #right {
+        transform: translateX(500px);
+        z-index: 1;
+        opacity: 0;
+    }
