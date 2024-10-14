@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.header {
+    flex-direction: row;
+    padding: 2vw;
+    color: #fff;
+    width: 100auto;
+    height: 20vw;
+    background-image: linear-gradient(-225deg, #231557 0%, #43107a 29%, #FF1361 100%);
+}
+
+.header h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.a-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a {
+    text-align: center;
+    line-height: 3vw;
+    flex-shrink: 0;
+    margin: 8vw;
+    width: 8vw;
+    height: 3vw;
+    border: 2px solid #fff;
+    background-color: skyblue;
+    border-radius: 2em;
+    transition: all 1s ease-out;
+}
+
+.a:hover {
+    background-color: rgba(0, 132, 255, 0.373);
+}
+
+.content {
+    width: 100%;
+    height: 500vw;
+    background: linear-gradient(45deg, #61fbf3, #945aff);
+}
+
+.fu-biao-ti {
+    text-align: center;
+    color: #fcfcfc;
+    position: relative;
+    top: 6vw;
+}
+
+.fu-biao-ti-nierong {
+    font-size: 25px;
+}
+
+.maobolikapian-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maoboli-kapian,
+.maoboli-kapian-1 {
+    margin-top: 5vw;
+    flex-shrink: 0;
+    width: 85vw;
+    height: 40vw;
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, .6),
+            rgba(255, 255, 255, .6),
+            rgba(255, 255, 255, .7));
+    backdrop-filter: blur(11px);
+    border-top: 2px solid rgba(255, 255, 255, .8);
+    border-left: 2px solid rgba(255, 255, 255, .8);
+    border-radius: 2em;
+    z-index: 1;
+    position: absolute;
+    /* top: 25vw; */
+    left: 5vw;
+}
+
+.maoboli-kapian{
+    position: absolute;
+    top: 55vw;
+}
+.maoboli-kapian-1 {
+    position: absolute;
+    top: 100vw;
+}
+
+.maoboli-kapian p,
+.maoboli-kapian-1 p {
+    padding: 12px;
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 54px;
+}
+
+.mao-buo-li-nierong2 {
+    margin: 3vw;
+    padding: 3vw;
+    width: 8vw;
+    height: 9vw;
+}
+
+.mao-buo-li-nierong-2-p {
+    margin: 2vw;
+    color: #fcfcfc;
+    font-size: 15px;
+    text-align: center;
+}
+
+.after,
+.after1 {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    top: 35vw;
+    left: 80vw;
+    z-index: 0;
+}
+
+.before,
+.before1 {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    top: 75vw;
+    left: 4vw;
+    z-index: 0;
+    transition: all 1s linear;
+}
+
+.after1 {
+    position: absolute;
+    top: 100vw;
+}
+
+.before1 {
+    position: absolute;
+    top: 135vw;
+}
+
+.picture {
+    position: absolute;
+    top: 11vw;
+    left: 32vw;
+    width: 50vw;
+    border-radius: 2em;
+}
+
+/* 过渡动画*/
+@keyframes slide-fade-in {
+    from {
+        opacity: 0;
+        /* box-shadow: none; */
+        transform: scale(.1) translateX(12vw);
+    }
+}
+
+.maobolikapian-home {
+    display: grid;
+    /* gap: 2rem; */
+    /* 自动排列 */
+    /* grid-auto-flow: dense; */
+    grid-template-columns: repeat(4, 30ch);
+}
+
+.maoboli-kapian,
+.maoboli-kapian-1 {
+    animation: slide-fade-in both;
+    /* 使用浏览器的视图时间线,允许动画根据视口的变化进行同步 */
+    animation-timeline: view();
+    /* 定义动画时间范围 */
+    animation-range: contain 0% contain 50%;
+    /* border-radius: 10px; */
+    /* line-height: 6; */
+    box-shadow: 0px 8px 20px #00000022;
+    /* font-size: 32px; */
+    /* color: #fff; */
+    /* width: 100%;
+    height: 100%; */
+    /* overflow: hidden; */
+    background-image: linear-gradient(to bottom right,
+            #91defe,
+            #99c0f9,
+            #bdb6ec,
+            #d7b3e3,
+            #efb3d5,
+            #f9bccc);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* .maoboli-kapian,
+.maoboli-kapian-1 img {
+    width: 100%;
+    height: 100%;
+} */
+
+.maoboli-kapian,
+.maoboli-kapian-1:nth-of-type(4n) {
+    grid-column: span 2;
+}
+
+.maoboli-kapian,
+.maoboli-kapian-1:nth-of-type(5n) {
+    grid-column: span 2;
+}
+
+.maoboli-kapian,
+.maoboli-kapian-1:nth-of-type(7n) {
+    grid-row: span 2;
+}
+
+
+/* 动画关键帧 */
+@keyframes run {
+
+    0%,
+    10% {
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+
+    20%,
+    30% {
+        /* margin-left: -1200px;; */
+        transform: translateX(-1200px);
+    }
+
+    40%,
+    50% {
+        /* margin-left: -2400px; */
+        transform: translateX(-2400px);
+    }
+
+    60%,
+    70% {
+        /* margin-left: -3600px; */
+        transform: translateX(-3600px);
+    }
+
+    80%,
+    90% {
+        /* margin-left: -4800px; */
+        transform: translateX(-4800px);
+    }
+
+    100% {
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+/* <-------------------------------------------------------------------------------> */
+
+.out {
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    margin: 0 auto;
+    top: 42vw;
+    left: 21vw;
+}
+    .out,
+    .inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .out .inner .img {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .out .inner .img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .out .arrow {
+        font-size: 32px;
+    }
+
+    .out .arrow i {
+        position: absolute;
+        color: #fff;
+        z-index: 9999;
+        cursor: pointer;
+        top: 84px;
+    }
+
+    .out .arrow .left {
+        left: 0;
+    }
+
+    .out .arrow .right {
+        left: 780px;
+    }
+
+    /* .out .button {
+        width: 175px;
+        height: 15px;
+        position: absolute;
+        z-index: 9999;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .out .button p {
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: silver;
+    } */
+
+    .out .button p:first-child {
+        background-color: skyblue;
+    }
+
+    .out #last {
+        transform: translateX(0);
+        z-index: 9;
+        opacity: 1;
+    }
+
+    .out #first {
+        transform: translateX(200px) scale(1.3);
+        z-index: 99;
+        opacity: 1;
+    }
+
+    .out #second {
+        transform: translateX(400px);
+        z-index: 9;
+        opacity: 1;
+    }
+
+    .out #left {
+        transform: translateX(-100px);
+        z-index: 1;
+        opacity: 0;
+    }
+
+    .out #right {
+        transform: translateX(500px);
+        z-index: 1;
+        opacity: 0;
+    }
